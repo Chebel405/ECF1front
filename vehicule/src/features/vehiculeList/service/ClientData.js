@@ -13,8 +13,15 @@ export const ClientData = [
         prenom: "Varie",
         dateNaissance: "31/12/1988",
         tel:"06/45/45/34/76",
-        location: false,
-        
+        location: false,    
 
+    },//PUSH
+    {
+        id: 3,
+        nom: "Pop",
+        prenom: "mmarie",
+        dateNaissance: "31/12/1888",
+        tel:"06/12/34/21/45",
+        location: false,
     },
 ]

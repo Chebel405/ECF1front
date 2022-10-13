@@ -3,6 +3,7 @@ import { VehiculePage } from './features/vehiculeList/VehiculePage';
 
 function App() {
   return (
+    
    <VehiculePage/>
   );
 }

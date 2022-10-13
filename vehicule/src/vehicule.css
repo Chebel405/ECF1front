@@ -1,0 +1,10 @@
+.container{
+    color: brown;
+    text-align: center;
+}
+#root{
+    text-align: center;
+}
+button{
+    margin-right: 1%;
+}

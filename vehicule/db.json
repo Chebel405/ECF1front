@@ -2,8 +2,11 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "nom": "Pop",
+      "prenom": "mmarie",
+      "dateNaissance": "31/12/1888",
+      "tel":"06/12/34/21/45",
+      "location": false
     }
   ],
   "comments": [

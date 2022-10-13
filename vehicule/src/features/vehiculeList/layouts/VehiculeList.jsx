@@ -6,7 +6,8 @@ import { Vehicule } from '../components/Vehicule'
 export const VehiculeList = () => {
 
     const [vehicules, setVehicules] = useState(ClientData)
-    const [vehiculeAdd, setVehiculeAdd] = useState(ClientData)
+    const [vehiculeAdd, setVehiculeAdd] = useState();
+    //   const [Clients, setClients] = useState < Clients[ClientData] > ([]);
 
 
     /**
@@ -15,7 +16,9 @@ export const VehiculeList = () => {
      * de celui qu'il veut supprimer.  
      */
     const supprimer = (id) => {
-        setVehicules((vehicules) => { return vehicules.filter(vehicule => vehicule.id !== id) })
+        const supprimer = vehicules.filter((vehicule) => vehicule.id !== id);
+        setVehicules(supprimer);
+        // setVehicules((vehicules) => { return vehicules.filter(vehicule => vehicule.id !== id) })
     }
     /**
      * 
@@ -29,7 +32,6 @@ export const VehiculeList = () => {
     /**
      * Méthod Ajouter Location à ajouter
      */
-
     const ajouter = (newLocation) => {
         setVehicules((vehicules) => { return [...vehicules, newLocation] })
         setVehiculeAdd((value) => !value);
@@ -38,6 +40,7 @@ export const VehiculeList = () => {
 
     return (
         <>
+            <h1>Gestion Locataire</h1>
 
             {vehicules.map((vehicule, index) => { return <Vehicule key={index} vehicule={vehicule} supprimer={supprimer} ajouter={ajouter} modifier={modifier} /> })}
 
