@@ -9,6 +9,7 @@ export const LeButton = (props) => {
         props.handleClick(event)
     }
 
+
     return (
         <Button onClick={handleClick}>{props.children}</Button>
     )
