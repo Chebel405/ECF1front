@@ -3,6 +3,9 @@ import { LocataireInput } from "../components/LocataireInput";
 
 
 export const AddLocataire = (props) => {
+
+
+
     const { newLocataires, setNewLocataires } = useState({
 
         nom: "",
@@ -24,6 +27,10 @@ export const AddLocataire = (props) => {
         text: "",
         type: "date"
     }]
+
+
+
+
 
     const saveInput = (name, value) => {
         setNewLocataires((previousTodo) => { return { ...previousTodo, [name]: value } })

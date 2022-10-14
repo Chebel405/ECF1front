@@ -2,12 +2,18 @@ import React from 'react'
 import { ClientData } from '../service/ClientData'
 import { useState } from 'react'
 import { Vehicule } from '../components/Vehicule'
+import { ClientService } from '../service/ClientService'
 
 export const VehiculeList = () => {
 
     const [vehicules, setVehicules] = useState(ClientData)
-    const [vehiculeAdd, setVehiculeAdd] = useState();
+    const [vehiculeAdds, setVehiculeAdds] = useState();
     //   const [Clients, setClients] = useState < Clients[ClientData] > ([]);
+
+
+    // const trouverVehicules = () => {
+    //     ClientService.trouver().then(data => setVehicules(data))
+    // }
 
 
     /**
@@ -34,7 +40,7 @@ export const VehiculeList = () => {
      */
     const ajouter = (newLocation) => {
         setVehicules((vehicules) => { return [...vehicules, newLocation] })
-        setVehiculeAdd((value) => !value);
+        setVehiculeAdds((value) => !value);
 
     }
 
@@ -43,6 +49,7 @@ export const VehiculeList = () => {
             <h1>Gestion Locataire</h1>
 
             {vehicules.map((vehicule, index) => { return <Vehicule key={index} vehicule={vehicule} supprimer={supprimer} ajouter={ajouter} modifier={modifier} /> })}
+
 
         </>
     )

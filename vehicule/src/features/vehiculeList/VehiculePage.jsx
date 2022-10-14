@@ -4,5 +4,7 @@ import { VehiculeList } from './layouts/VehiculeList';
 export const VehiculePage = () => {
     return (
         <VehiculeList />
+
+
     )
 }

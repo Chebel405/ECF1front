@@ -1,14 +1,26 @@
-const URL = 'http://localhost:3000/ClientData';
+import { VehiculeList } from '../layouts/VehiculeList';
 
-// findAll = () => {
-//     return fetch(url)
-//     .then((response) => 
-//     response.json())
-// }
+    const URL = 'http://localhost:3000/ClientData';
 
-supprimer = async(id) => { 
-    return fetch(`${URL}/${id}`, {
-        method:"DELETE",
-    }).then((response) => response.json())
-}
+
+
+    // supprimer = (id) => { 
+    //     return fetch(`${URL}/${id}`, {
+    //         method:"DELETE",
+    //     }).then((response) => response.json())
+    // }
+
+    // trouver = () => {
+    //     return fetch(URL)
+    //     .then((res, rej) => res.json())
+    // }
+
+
+
+
+
+
+
+
+
 
