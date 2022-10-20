@@ -42,6 +42,7 @@ export const AddLocataire = (props) => {
         <>
             <h2>Ajout Locataire</h2>
             <div>
+                <input name="name" type="text" placeholder />
                 {cle.map((newLocataire, index) => (<LocataireInput newLocataire={newLocataire} key={index} vehicule={newLocataire} saveInput={saveInput} />))}
             </div>
             <button onClick={handleClickSave}>Ok</button>

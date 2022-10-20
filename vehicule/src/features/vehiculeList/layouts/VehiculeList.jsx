@@ -8,6 +8,7 @@ export const VehiculeList = () => {
 
     const [vehicules, setVehicules] = useState(ClientData)
     const [vehiculeAdds, setVehiculeAdds] = useState();
+
     //   const [Clients, setClients] = useState < Clients[ClientData] > ([]);
 
 
@@ -47,7 +48,7 @@ export const VehiculeList = () => {
     return (
         <>
             <h1>Gestion Locataire</h1>
-
+            <input name="name" type="text" placeholder />
             {vehicules.map((vehicule, index) => { return <Vehicule key={index} vehicule={vehicule} supprimer={supprimer} ajouter={ajouter} modifier={modifier} /> })}
 
 
