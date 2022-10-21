@@ -4,29 +4,14 @@ import React from 'react'
 import { LeButton } from './LeButton';
 import { InputText } from 'primereact/inputtext';
 import '../../../../src/vehicule.css';
+import { useState } from 'react';
 
 
 
 export const Vehicule = (props) => {
 
 
-    const supprimer = () => {
-        return null;
-    }
 
-    const ajouter = () => {
-
-    };
-
-    const modifier = () => {
-
-    }
-    // const handleChange = event => {
-    //     this.setState({ name: event.target.value });
-    // }
-    // const handleSubmit = event => {
-    //     event.preventDefault();
-    // }
     return (
         <div className='container' id="greeting">
 

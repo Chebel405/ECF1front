@@ -1,5 +1,6 @@
 import React from 'react';
 import { LocataireInput } from "../components/LocataireInput";
+import { useState } from 'react';
 
 
 export const AddLocataire = (props) => {
@@ -29,20 +30,19 @@ export const AddLocataire = (props) => {
     }]
 
 
-
-
-
     const saveInput = (name, value) => {
         setNewLocataires((previousTodo) => { return { ...previousTodo, [name]: value } })
     }
+
+
     const handleClickSave = () => {
-        props.addTodo(newLocataires)
+        props.addLocataire(newLocataires)
     }
     return (
         <>
             <h2>Ajout Locataire</h2>
             <div>
-                <input name="name" type="text" placeholder />
+
                 {cle.map((newLocataire, index) => (<LocataireInput newLocataire={newLocataire} key={index} vehicule={newLocataire} saveInput={saveInput} />))}
             </div>
             <button onClick={handleClickSave}>Ok</button>

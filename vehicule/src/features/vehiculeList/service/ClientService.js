@@ -1,34 +1,38 @@
 import { VehiculeList } from '../layouts/VehiculeList';
+import { VehiculePage } from '../VehiculePage';
 
     const URL = 'http://localhost:3000/ClientData';
 
 
     class ClientService {
-      findAll = async () => {
-        const res = await fetch(URL);
+
+      findAll =  () => {
+        const res = fetch(URL);
           return res.json();
       };
     
-      delete = async (id) => {
-        const res = await fetch(`${URL}/${id}`, {
+      delete =  (id) => {
+        const res = fetch(`${URL}/${id}`, {
               method: "DELETE",
           });
           return res.json();
       };
     
-      patch = async (id, element) => {
-        const res = await fetch(`${URL}/${id}`, {
+      patch = (id, modification) => {
+        const res = fetch(`${URL}/${id}`, {
               method: "PATCH",
-              body: JSON.stringify(element),
+              body: JSON.stringify(modification),
               headers: { "Content-Type": "application/json" },
           });
           return res.json();
       };
-      findById = async (id) => {
-        const data = await fetch(`${URL}/${id}`);
-          return await data.json();
+      
+      findById = (id) => {
+        const data = fetch(`${URL}/${id}`);
+          return  data.json();
       };
     }
+    export default ClientService;
 
 
 
